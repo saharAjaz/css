@@ -1,0 +1,160 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Overall Layout */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Header Section */
+.header {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+}
+
+.grid-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.logo h1 {
+    margin: 0;
+}
+
+.nav .login-button {
+    background: none;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Hero Section */
+.hero {
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+    position: relative;
+}
+
+.hero-content {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Search Form Section */
+.search-form {
+    width: 100%;
+    background-color: white;
+    padding: 20px 0;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.search-input {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.search-input label {
+    font-size: 14px;
+}
+
+.search-input input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Rent by Brands Section */
+.rent-by-brands,
+.rent-by-body-type {
+    width: 90%;
+    margin: 40px auto;
+}
+
+.rent-by-brands h3,
+.rent-by-body-type h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.brands-container,
+.body-type-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.brand-item,
+.body-type-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 150px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.brand-item:hover,
+.body-type-item:hover {
+    transform: translateY(-5px);
+}

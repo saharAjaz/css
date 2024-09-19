@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Personal portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            position: fixed;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            border-radius: 30px 30px 0 0;
+        }
+
+        .content-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            gap: 100px;
+            padding-top: 60px;
+        }
+
+        .image-container {
+            width: 35%;
+            text-align: right;
+        }
+
+        .image-container img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons img {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* "About" section styling */
+        .about-section {
+            background-color: #f0f0f0; /* Light grey background */
+            padding: 50px 20px;
+        }
+
+        .about-label {
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 50px;
+        }
+
+        .about-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-content .text {
+            width: 60%;
+        }
+
+        .about-content .image-container {
+            width: 35%;
+        }
+
+        .about-content img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 8px;
+        }
+         /* "Skills" section styling */
+         .skills-section {
+            background-color: white;
+            padding: 50px 20px;
+        }
+
+        .skills-label {
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 50px;
+        }
+
+       /* Skills Grid Styling */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* 8 columns */
+    grid-template-rows: repeat(2, auto);  /* 2 rows */
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.grid-item {
+    background-color: #e0e0e0;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for logos */
+.grid-item img {
+    width: 40px; /* Adjust the width as needed */
+    height: 40px;
+    margin-bottom: 10px; /* Space between the logo and the text */
+}
+.experience-section {
+            background-color:  #f0f0f0;
+            padding: 50px 20px;
+}
+
+.experience-label {
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 50px;
+}
+
+p {
+    
+    text-align: center;
+}
+
+/* Experience Section Styling */
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.experience-box {
+    display: flex;
+    
+    align-items: center;
+    width: 70%; /* Adjust as needed */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.experience-logo {
+    width: 15%; /* Adjust the width as needed */
+    margin-right: 20px;
+}
+
+.experience-logo img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.experience-text {
+    flex-grow: 1;
+}
+
+.experience-text p {
+    margin: 5px 0;
+}
+
+.date {
+    margin-right: 10px;
+    font-weight: bold;
+    color: #888;
+}
+
+.experience-text b {
+    font-size: 20px;
+}
+
+.work-section {
+            background-color: white;
+            padding: 50px 20px;
+}
+
+.work-label {
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 50px;
+}
+
+/* work */
+/* Containers Styling for Column Layout */
+.container-column {
+    display: flex;
+    flex-direction: column; /* Changed to column layout */
+    gap: 20px;
+    padding: 20px;
+}
+
+.flex-container {
+    display: flex;
+    width: 100%; /* Full width in column */
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    align-items: center;
+}
+
+/* Image styling */
+.container-image {
+    width: 40%; /* Image takes 40% of the container */
+    margin-right: 20px;
+}
+
+.container-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Text styling */
+.container-text {
+    width: 60%; /* Text takes 60% of the container */
+}
+
+.container-text h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.container-text p {
+    font-size: 16px;
+    color: #555;
+}
+
+
+.tes-section {
+            background-color:  #f0f0f0;
+            padding: 50px 20px;
+}
+
+.tes-label {
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 50px;
+}
+/* Containers Styling for Row Layout */
+.container-row {
+    display: flex;
+    justify-content: space-between; /* Space between containers */
+    gap: 20px;
+    padding: 20px;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
+    width: 30%; /* Each container takes 30% of the row */
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    align-items: center; /* Align image to center */
+    text-align: center;  /* Center-align the text */
+}
+
+/* Image styling */
+.container-image {
+    width: 100%; /* Image container takes full width */
+    margin-bottom: 15px;
+}
+
+.container-image img {
+    width: 80%; /* Adjust the size to fit center */
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Text styling */
+.container-text {
+    width: 100%; /* Text takes full width */
+}
+
+.container-text h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.container-text p {
+    font-size: 16px;
+    color: #555;
+}
+
+
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo"><span><b>&lt; SS /&gt;</b></span></div>
+        <div class="nav-links">
+            <a href="#About">About</a>
+            <a href="#Work">Work</a>
+            <a href="#Testimonals">Testimonials</a>
+            <a href="#Contact">Contact</a>
+            <a href="#theme-toggle">☀️</a>
+            <button class="download-cv">Download CV</button>
+        </div>
+    </nav>
+    <br>
+    <div class="content-container">
+        <div class="content">
+            <h1>Hi! I am Saghar 👋</h1>
+            <p>I'm a full stack developer (React.js & Node.js) with a focus on creating (and occasionally designing)
+                exceptional digital experiences that are fast, accessible, visually appealing, and responsive. Even
+                though I have been creating web applications for over 7 years, I still love it as if it was something
+                new.</p>
+            <br>
+            <p><span>📍 Ahmedabad, India</span></p>
+            <p><span>🟢 Available for new projects</span></p>
+            <div class="social-icons">
+                <img src="github.png" alt="Placeholder Image"><img src="twitter.png" alt="Placeholder Image"><img
+                    src="figma.png" alt="Placeholder Image">
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="profile.jpg" alt="Placeholder Image">
+        </div>
+    </div>
+
+    <!-- "About" Section -->
+    <section class="about-section" id="About">
+        <div class="about-label">About</div>
+        <div class="about-content">
+            <div class="image-container">
+                <img src="profile2.jpg" alt="About Image">
+            </div>
+            <div class="text">
+                <h2>Curious about me? Here you have it:</h2>
+                <p>
+                    I'm a passionate, <a href="#">self-proclaimed designer</a> who specializes in full stack development (React.js & Node.js). I am very enthusiastic about bringing the technical and visual aspects of digital products to life. User experience, pixel-perfect design, and writing clear, readable, highly performant code matter to me.
+                </p>
+                <p>
+                    I began my journey as a web developer in 2015, and since then, I've continued to grow and evolve as a developer, taking on new challenges and learning the latest technologies along the way. Now, in my thirties, 7 years after starting my web development journey, I'm building cutting-edge web applications using modern technologies such as Next.js, TypeScript, Nestjs, Tailwindcss, Supabase and much more.
+                </p>
+                <p>
+                    I am very much a progressive thinker and enjoy working on products end to end, from ideation all the way to development.
+                </p>
+                <p>
+                    When I'm not in full-on developer mode, you can find me hovering around on Twitter or on indie hacker, witnessing the journey of early startups or enjoying some free time. You can follow me on <a href="#">Twitter</a> where I share tech-related bites and build in public, or you can follow me on <a href="#">GitHub</a>.
+                </p>
+                <h3>Finally, some quick bits about me...</h3>
+                <ul class="skills-list">
+                    <li>B.E. in Computer Engineering</li>
+                    <li>Avid learner</li>
+                    <li>Full time freelancer</li>
+                    <li>Aspiring indie hacker</li>
+                </ul>
+                <p>
+                    One last thing, I'm available for freelance work, so feel free to reach out and say hello! I promise I don’t bite <span>😄</span>
+                </p>    
+            </div>
+        </div>
+    </section>
+
+    <section class="skills-section" id="skills">
+        <div class="skills-label">Skills</div>
+        <div class="text">
+            <p>The skills, tools, and techniques I am really good at:</p>
+        </div>
+            <!-- Grid Section -->
+            <div class="skills-grid">
+                <div class="grid-item">
+                    <img src="javascript.jpeg" alt="JavaScript">
+                    JavaScript
+                </div>
+                <div class="grid-item">
+                    <img src="typescript.jpeg" alt="TypeScript">
+                    TypeScript
+                </div>
+                <div class="grid-item">
+                    <img src="react.jpeg" alt="React">
+                    React
+                </div>
+                <div class="grid-item">
+                    <img src="next.jpeg" alt="Next.js">
+                    Next.js
+                </div>
+                <div class="grid-item">
+                    <img src="node.jpeg" alt="Node.js logo">
+                    Node.js
+                </div>
+                <div class="grid-item">
+                    <img src="express.jpeg" alt="Express.js">
+                    Express.js
+                </div>
+                <div class="grid-item">
+                    <img src="nest.jpeg" alt="NestJS">
+                    NestJS
+                </div>
+                <div class="grid-item">
+                    <img src="socket.jpeg" alt="Socit.io">
+                    Socit.io
+                </div>
+                <div class="grid-item">
+                    <img src="postgreSQL.jpeg" alt="PostgreSQL">
+                    PostgreSQL
+                </div>
+                <div class="grid-item">
+                    <img src="mongoDB.jpeg" alt="MangoDB">
+                    MangoDB
+                </div>
+                <div class="grid-item">
+                    <img src="sass.jpeg" alt="Sass/Scss">
+                    Sass/Scss
+                </div>
+                
+                <div class="grid-item">
+                    <img src="figma.png" alt="Figma logo">
+                    Figma
+                </div>
+                <div class="grid-item">
+                    <img src="cypress.jpeg" alt="Cypress">
+                    Cypress
+                </div>
+                <div class="grid-item">
+                    <img src="storybook.jpeg" alt="storyBook">
+                    storyBook
+                </div>
+                <div class="grid-item">
+                    <img src="git.jpeg" alt="Git">
+                    Git
+                </div>
+                <div class="grid-item">
+                    <img src="tailwind.png" alt="Tailwindcss">
+                    Tailwindcss
+                </div>
+            </div>
+        </section>
+
+        <section class="experience-section" id="experience">
+            <div class="experience-label">Experience</div>
+            <div class="text">
+                <p>Here is a quick summary of my most recent experience:</p>
+            </div>
+        
+            <!-- Experience Boxes -->
+            <div class="experience-container">
+                <!-- Experience 1 -->
+                <div class="experience-box">
+                    <div class="experience-logo">
+                        <img src="upwork.png" alt="Company 1 Logo">
+                    </div>
+                    <div class="experience-text">
+                        <p><b>Sr Frontend Developer</b> <span class="date">Nov 2021-present</span></p>
+                        <ul>
+                            <li>Sed quis justo ac magna.</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                            <li>Sed quis justo ac magna.</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                          </ul>
+                    </div>
+                </div>
+        
+                <!-- Experience 2 -->
+                <div class="experience-box">
+                    <div class="experience-logo">
+                        <img src="upwork.png" alt="Company 2 Logo">
+                    </div>
+                    <div class="experience-text">
+                        <p><b>Team Leader</b> <span class="date">July 2017-Oct 2021</span></p>
+                        <ul class="experience-unordered">
+                            <li>Sed quis justo ac magna.</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                            <li>Sed quis justo ac magna.</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                          </ul>
+                    </div>
+                </div>
+        
+                <!-- Experience 3 -->
+                <div class="experience-box">
+                    <div class="experience-logo">
+                        <img src="upwork.png" alt="Company 3 Logo">
+                    </div>
+                    <div class="experience-text">
+                        <p><b>FullStack Developer</b> <span class="date">Dec 2015-May 2017</span></p>
+                        <ul class="experience-unordered">
+                            <li>Sed quis justo ac magna.</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                            <li>Sed quis justo ac magna.</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                          </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="work-section" id="work">
+            <div class="work-label">Work</div>
+            <div class="text">
+                <p>Some of NoteWorthy Projects I have bulit:</p>
+            </div>
+            <div class="container-column">
+                <!-- Container 1 -->
+                <div class="flex-container">
+                    <div class="container-image">
+                        <img src="flikle.webp" alt="Project 1">
+                    </div>
+                    <div class="container-text">
+                        <h3>Fiskil</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+                    </div>
+                </div>
+            
+                <!-- Container 2 -->
+                <div class="flex-container">
+                    <div class="container-image">
+                        <img src="flikle.webp" alt="Project 2">
+                    </div>
+                    <div class="container-text">
+                        <h3>Fiskil</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+                    </div>
+                </div>
+            
+                <!-- Container 3 -->
+                <div class="flex-container">
+                    <div class="container-image">
+                        <img src="flikle.webp" alt="Project 3">
+                    </div>
+                    <div class="container-text">
+                        <h3>Fiskil</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </section>
+
+        <section class="tes-section" id="Testimonials">
+            <div class="tes-label">Testimonials</div>
+            <div class="text">
+                <p>Nice things people have said about me:</p>
+            </div>
+            <div class="container-row">
+                <!-- Container 1 -->
+                <div class="flex-container">
+                    <div class="container-image">
+                        <img src="project1.jpg" alt="Person1">
+                    </div>
+                    <div class="container-text">
+                        <h3>Person1</h3>
+                        <p>jhdson mnkdjsvn mrf.</p>
+                    </div>
+                </div>
+            
+                <!-- Container 2 -->
+                <div class="flex-container">
+                    <div class="container-image">
+                        <img src="project2.jpg" alt="Person2">
+                    </div>
+                    <div class="container-text">
+                        <h3>Person2</h3>
+                        <p>hhoiiuyt mcb itrei.</p>
+                    </div>
+                </div>
+            
+                <!-- Container 3 -->
+                <div class="flex-container">
+                    <div class="container-image">
+                        <img src="project3.jpg" alt="Person3">
+                    </div>
+                    <div class="container-text">
+                        <h3>person3</h3>
+                        <p>gkfuksdh khdofifhdo ufoeiuhfo.</p>
+                    </div>
+                </div>
+            </div>
+            
+
+
+
+        </section>
+ 
+</body>
+
+</html>
